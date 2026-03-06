@@ -105,6 +105,19 @@ LEVEL 2 — Logic sharpening (this is where learning happens)
 Challenge 4: Remove specific item (no mutation)
 */
 
+function removeitem(arr, item) {
+  for (let index = 0; index < arr.length; index++) {
+    let newarr = [];
+    if (arr[index] !== item) {
+      newarr.push(arr[index]);
+    }
+    return newarr;
+  }
+}
+
+let removeResult = removeitem(codingLanguages, "rust");
+console.log(removeResult);
+
 /*
 Challenge 6: Check existence
 Write a function that:
