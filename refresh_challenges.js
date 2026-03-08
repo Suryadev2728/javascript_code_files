@@ -136,3 +136,20 @@ function checkValue(array, value) {
 
 let resultValue = checkValue(codingLanguages, "rusts");
 console.log(resultValue);
+
+/* 
+LEVEL 3 — Think like a backend dev 🧠
+Challenge 7: Validate passwords
+Given dummyPasswords, create a new array that:
+Excludes passwords shorter than 6 characters
+*/
+
+let dummyPasswords = ["qwerty", "superman", "Batman", "Spiderman"];
+let newPasswords = [];
+for (let index = 0; index < dummyPasswords.length; index++) {
+  if (dummyPasswords[index].length > 6) {
+    newPasswords.push(dummyPasswords[index]);
+  }
+}
+
+console.log(newPasswords);
