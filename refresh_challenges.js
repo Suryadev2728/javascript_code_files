@@ -106,13 +106,13 @@ Challenge 4: Remove specific item (no mutation)
 */
 
 function removeitem(arr, item) {
+  let newarr = [];
   for (let index = 0; index < arr.length; index++) {
-    let newarr = [];
     if (arr[index] !== item) {
       newarr.push(arr[index]);
     }
-    return newarr;
   }
+  return newarr;
 }
 
 let removeResult = removeitem(codingLanguages, "rust");
@@ -125,3 +125,14 @@ Takes an array + value
 Returns true if found, else false
 ❌ No .includes()
 */
+
+function checkValue(array, value) {
+  let newarr = [];
+  for (const v of array) {
+    if (v === value) return true;
+  }
+  return false;
+}
+
+let resultValue = checkValue(codingLanguages, "rusts");
+console.log(resultValue);
