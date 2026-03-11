@@ -153,3 +153,86 @@ for (let index = 0; index < dummyPasswords.length; index++) {
 }
 
 console.log(newPasswords);
+
+/* 
+Challenge 9: Compare arrays
+Write a function that:
+Takes two arrays
+Returns true if they have the same values in same order
+*/
+
+let dummyArray = ["batman", "superman", "spiderman1"];
+let dummyArray2 = ["batman", "superman", "spiderman"];
+
+function comparingTwoArrays(arr1, arr2) {
+  if (arr1.length !== arr2.length) {
+    return false;
+  }
+  for (let index = 0; index < arr1.length; index++) {
+    if (arr1[index] !== arr2[index]) {
+      return false;
+    }
+  }
+  return true;
+}
+
+let compareResult = comparingTwoArrays(dummyArray, dummyArray2);
+console.log(compareResult);
+
+/* 
+2. Write a `for` loop that loops through the array `["London", "New York", "Paris", "Berlin"]` and skips `"Paris"`. 
+   Store the other cities in a new array named `visitedCities`.
+*/
+
+let cities = ["London", "New York", "Paris", "berlin"];
+let visitedCities = [];
+
+for (const city of cities) {
+  if (city == "Paris") continue;
+  visitedCities.push(city);
+}
+
+/* 
+for (const city of cities) {
+  if (city !== "Paris") {
+    visitedCities.push(city);
+  }
+}
+*/
+
+console.log(visitedCities);
+
+/* 
+
+3. Use a `for-of` loop to iterate through the array `[1, 2, 3, 4, 5]` and stop when the number `4` is found. 
+   Store the numbers before `4` in an array named `smallNumbers`.
+   */
+
+let numbers = [1, 2, 3, 4, 5];
+
+for (const num of numbers) {
+}
+
+/* 
+5. Use a `for-in` loop to loop through an object containing city populations. 
+   Stop the loop when the population of `"Berlin"` is found and store all previous cities' populations in a new object named `cityPopulations`.
+
+   let citiesPopulation = {
+    "London": 8900000,
+    "New York": 8400000,
+    "Paris": 2200000,
+    "Berlin": 3500000
+};
+*/
+
+/* 
+6. Use a `for-in` loop to loop through an object containing city populations. 
+   Skip any city with a population below 3 million and store the rest in a new object named `largeCities`.
+
+let worldCities = {
+    "Sydney": 5000000,
+    "Tokyo": 9000000,
+    "Berlin": 3500000,
+    "Paris": 2200000
+};
+*/
