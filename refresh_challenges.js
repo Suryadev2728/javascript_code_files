@@ -225,7 +225,35 @@ for (const num of numbers) {
 };
 */
 
-/* 
+let citiesPopulation = {
+  London: 8900000,
+  "New York": 8400000,
+  Paris: 2200000,
+  Berlin: 3500000,
+};
+
+let cityPopulations = {};
+
+for (const city in citiesPopulation) {
+  if (city === "Berlin") {
+    break;
+  }
+
+  cityPopulations[city] = citiesPopulation[city];
+}
+console.log(cityPopulations);
+
+// individually accessing all the keys in an object
+console.log(Object.keys(cityPopulations));
+// acccessing all the values
+console.log(Object.values(cityPopulations));
+// accessing both key-value pairs
+console.log(Object.entries(citiesPopulation));
+// accessing just the london in two ways
+console.log(cityPopulations["London"]);
+console.log(citiesPopulation.London);
+
+/*
 6. Use a `for-in` loop to loop through an object containing city populations. 
    Skip any city with a population below 3 million and store the rest in a new object named `largeCities`.
 
@@ -236,3 +264,19 @@ let worldCities = {
     "Paris": 2200000
 };
 */
+
+let worldCities = {
+  Sydney: 5000000,
+  Tokyo: 9000000,
+  Berlin: 3500000,
+  Paris: 2200000,
+};
+
+let largeCities = {};
+
+for (const city in worldCities) {
+  if (worldCities[city] < 3000000) continue;
+  largeCities[city] = worldCities[city];
+}
+
+console.log(Object.entries(largeCities));
